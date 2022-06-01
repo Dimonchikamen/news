@@ -1,0 +1,50 @@
+$header_height: 40px; 
+$navigation_bar_height: 50px;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.tab-link {
+    background-color: rgb(213, 231, 238);
+    border-radius: 0.3rem;
+    display: block;
+    min-height: 40px;    
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.tab-link.active {
+    background-color: lightblue;
+}
+
+.header {
+    font-size: 18px;
+    background-color: rgb(184, 223, 238);
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: $header_height;
+    width: 100%;
+}
+
+.navigation-bar {
+    background-color: white;
+    border-top: 1px solid lightgray;
+    position: fixed;
+    bottom: 0;
+    height: $navigation_bar_height;
+    width: 100%;
+}
+
+.content-container {
+    box-sizing: content-box;
+    padding-top: $header_height;
+    height: calc(100vh - $header_height - $navigation_bar_height);
+    overflow: auto;
+}
